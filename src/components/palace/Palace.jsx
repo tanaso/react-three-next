@@ -80,7 +80,7 @@ export const Palace = ({ controlsRef, ...props }) => {
     return (
         <>
             <PalaceFloor />
-            {Array.from({ length: 8 }).map(generateRoom)}
+            {Array.from({ length: 10 }).map(generateRoom)}
         </>
     );
 };
@@ -89,7 +89,7 @@ export const PalaceFloor = ({ ...props }) => {
     const [lines, setLines] = useState([]);
 
     const PalaceFloorMaterial = new MeshStandardMaterial({ color: "#F7FFF7" });
-    const PalaceFloorGeometry = new BoxGeometry(30, 50, 0.3); // Reduce the size of the Palace
+    const PalaceFloorGeometry = new BoxGeometry(40, 60, 0.3); // Reduce the size of the Palace
 
     // Assuming the PalaceFloor is centered at [0, 0, 0] and rotated to lie flat
     const originPosition = [0, 0, 0];
